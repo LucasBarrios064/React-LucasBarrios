@@ -1,0 +1,13 @@
+.carrito{
+    width: 40px;
+    margin: auto;
+}
+
+.navPrincipal{
+    background-color: rgb(211, 137, 0);
+}
+
+.nav-item a:hover{
+    background-color: rgb(190, 125, 3);
+    border-radius: 20%;
+}
