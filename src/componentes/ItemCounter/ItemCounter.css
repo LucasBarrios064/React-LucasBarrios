@@ -1,0 +1,16 @@
+.itemCounter-box{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.itemCounter-title{
+    margin-right: 5%;
+}
+
+.itemCounter-number{
+    margin-left:2% ;
+    margin-right:2% ;
+}
+.itemCounter-buttonAdd{
+    margin-left: 3%;
+}

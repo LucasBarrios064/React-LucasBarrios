@@ -1,5 +1,18 @@
-.tituloBienvenida{
-    color: rgb(255, 255, 255);
-    text-decoration: underline;
-    text-shadow: 1px 4px 1px rgb(172, 112, 1);
+.tituloBienvenida {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-shadow: 1px 4px 1px rgb(172, 112, 1);
+}
+
+.itemList-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 15px 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }

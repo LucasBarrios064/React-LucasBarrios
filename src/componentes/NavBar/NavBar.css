@@ -9,5 +9,21 @@
 
 .nav-item a:hover{
     background-color: rgb(190, 125, 3);
-    border-radius: 20%;
+    border-radius: 5%;
+    color: black;
+}
+
+.NavBar-logo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 900%;
+}
+
+.nav-Link{
+    font-size: 150%;
+    color: black;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
 }
