@@ -1,13 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "./NavBar.css"
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { cartContext } from "../../context/cartContext";
+import "./NavBar.css";
 
 function CartWidget() {
-    return (
-            <Link to="/">
-                <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="logo-carrito" className='carrito' />
-            </Link>
-    )
+  const { getTotalItemCount } = useContext(cartContext);
+  return (
+    <Link to="/carrito">
+      <span>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/107/107831.png"
+          alt="logo-carrito"
+          className="carrito"
+        />
+      </span>
+      <span>{getTotalItemCount()}</span>
+    </Link>
+  );
 }
 
-export default CartWidget
+export default CartWidget;

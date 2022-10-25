@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ItemCounter.css";
 
-export default function ItemCount({ stock, initial, text }) {
+export default function ItemCount({ stock, initial, text, onAddToCart }) {
   const [count, setCount] = useState(initial);
 
   function handleSubstract() {
@@ -13,12 +13,21 @@ export default function ItemCount({ stock, initial, text }) {
   }
 
   return (
-    <div className="itemCounter-box">
-      <h4 className="itemCounter-title">Comprar:</h4>
+    <>
+      <div className="itemCounter-box">
+        <h4 className="itemCounter-title">Comprar:</h4>
         <button onClick={handleSubstract}>-</button>
         <strong className="itemCounter-number">{count}</strong>
         <button onClick={handleAdd}>+</button>
-      <button className="itemCounter-buttonAdd">{text}</button>
-    </div>
+        <button
+          onClick={() => {
+            onAddToCart(count);
+          }}
+          className="itemCounter-buttonAdd"
+        >
+          {text}
+        </button>
+      </div>
+    </>
   );
 }

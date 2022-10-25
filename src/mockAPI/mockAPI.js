@@ -84,7 +84,7 @@ const data = [
 
 export function getData() {
     return new Promise((resolve) => {
-        setTimeout(() => resolve(data), 2000);
+        setTimeout(() => resolve(data), 1000);
     });
 }
 
@@ -93,7 +93,7 @@ export function getSingleData(id) {
         let itemRequest = data.find((item) => {
             return (item.id === Number(id))
         })
-        setTimeout(() => resolve(itemRequest), 2000);
+        setTimeout(() => resolve(itemRequest), 1000);
     });
 }
 
