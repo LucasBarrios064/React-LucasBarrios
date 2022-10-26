@@ -3,21 +3,26 @@ import { useParams } from "react-router-dom";
 import { getSingleData } from "../../mockAPI/mockAPI";
 import ItemDetail from "./ItemDetail";
 
-
-
 function ItemDetailContainer(props) {
   const [item, setItem] = useState({});
-
+  const [feedBack, setFeedBack] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
-    getSingleData(id).then((data) => {
-      setItem(data);
-    });
+    getSingleData(id)
+      .then((data) => {
+        setItem(data);
+      })
+      .catch((error) => {
+        setFeedBack(error.message);
+      });
   }, [id]);
 
   return (
     <>
+      {feedBack !== null ? (
+        <h3>ERROR : {feedBack}</h3>
+      ) : (
         <ItemDetail
           key={item.id}
           id={item.id}
@@ -27,9 +32,10 @@ function ItemDetailContainer(props) {
           detail={item.detail}
           stock={item.stock}
           expired={item.expires}
-          />
+        />
+      )}
     </>
   );
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

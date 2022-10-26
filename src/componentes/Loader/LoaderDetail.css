@@ -1,0 +1,29 @@
+.Loader-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding: 1%;
+    box-shadow: 1px 5px 10px black;
+    background-color: rgb(223, 146, 4);
+    width: 1000px;
+}
+
+.Loader-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.Loader-Box{
+    box-shadow: 1px 5px 10px;
+    background-color: rgb(223, 146, 4);
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
