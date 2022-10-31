@@ -9,7 +9,7 @@ El proyecto utiliza como base de datos [FireBase](https://firebase.google.com/) 
 
 En este proyecto se utilizo boostrap para el navegador y se utilizo SweetAlert para las notificaciones.
 
-### `Demo del proyecto`
+## Demo del proyecto
 Mediante este Link puedes acceder a una demo online del proyecto [https://lucasbarrios-animego.netlify.app/](https://lucasbarrios-animego.netlify.app/)
 #
 
