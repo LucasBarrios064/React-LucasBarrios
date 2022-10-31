@@ -1,5 +1,5 @@
 # Proyecto "ANIME-GO"
-## Proyecto creado con React como parte del curso de React
+## Proyecto creado con React como parte del curso de React de CoderHouse.
 
 El objetivo del curso era realizar una app Web que contenga la funcion de carrito de compra.
 
