@@ -32,8 +32,7 @@ function ItemDetail(product) {
             />
           ) : (
             <Link className="ItemDetail-carritoLink" to="/carrito">
-              {" "}
-              Ver Carrito{" "}
+              Ver Carrito
             </Link>
           )}
           <h4>Detalles: {product.detail}</h4>

@@ -21,6 +21,7 @@ function App() {
             <Route path="/producto/:id" element={<ItemDetailContainer/>}></Route>
             <Route path="/carrito" element={<CartView/>}></Route>
             <Route path="*" element={<h4>Error: 404</h4>} />
+            <Route path="/tusOrdenes"></Route>
           </Routes>
         </BrowserRouter>
       </CartContextProvider>

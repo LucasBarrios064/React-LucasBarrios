@@ -1,6 +1,5 @@
 import React from "react";
 import "./LoaderDetail.css";
-import ItemCount from "../ItemCounter/ItemCounter";
 import Loader from "./Loader";
 import { RaceBy } from "@uiball/loaders";
 
@@ -19,7 +18,6 @@ function LoaderDetail() {
             <RaceBy size={300} lineWeight={15} speed={1.4} color="black" />
           </h3>
         </div>
-        <ItemCount text="Añadir al carrito" />
         <div className="Loader-text">
           <h4>
             <RaceBy size={300} lineWeight={10} speed={1.4} color="black" />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getSingleData } from "../../mockAPI/mockAPI";
+import { getSingleData } from "../../services/firebase";
 import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer(props) {
@@ -11,17 +11,18 @@ function ItemDetailContainer(props) {
   useEffect(() => {
     getSingleData(id)
       .then((data) => {
-        setItem(data);
+        if (data.id === 0) {
+          setFeedBack("ERROR: Producto No encontrado");
+        } else {
+          setItem(data);
+        }
       })
-      .catch((error) => {
-        setFeedBack(error.message);
-      });
   }, [id]);
 
   return (
     <>
       {feedBack !== null ? (
-        <h3>ERROR : {feedBack}</h3>
+        <h3>{feedBack}</h3>
       ) : (
         <ItemDetail
           key={item.id}
@@ -31,7 +32,6 @@ function ItemDetailContainer(props) {
           price={item.price}
           detail={item.detail}
           stock={item.stock}
-          expired={item.expires}
         />
       )}
     </>

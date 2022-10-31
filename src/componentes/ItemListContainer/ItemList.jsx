@@ -15,7 +15,6 @@ function ItemList(props) {
           price={dataItem.price}
           detail={dataItem.detail}
           stock={dataItem.stock}
-          expired={dataItem.expires}
           />
         );
       })}

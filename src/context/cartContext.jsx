@@ -19,45 +19,65 @@ function CartContextProvider(props) {
   }
 
   function removeItem(idRemove) {
-    let newCart = cart.filter ((itemInCart) => itemInCart.id !== idRemove) 
-    setCart(newCart)
-    ;
+    let newCart = cart.filter((itemInCart) => itemInCart.id !== idRemove);
+    setCart(newCart);
   }
 
   function getTotalItemCount() {
     let total = 0;
     cart.forEach((itemInCart) => {
-      if(itemInCart.count >= itemInCart.stock){
-        total = total + itemInCart.stock
-      }else{
+      if (itemInCart.count >= itemInCart.stock) {
+        total = total + itemInCart.stock;
+      } else {
         total = total + itemInCart.count;
       }
     });
     return total;
   }
 
-  function getTotalSingleProduct(count , stock){
+  function getTotalSingleProduct(count, stock) {
     let totalProduct = 0;
-    if (count >= stock){
-      totalProduct = totalProduct + stock
-    }else{
-      totalProduct = totalProduct + count
+    if (count >= stock) {
+      totalProduct = totalProduct + stock;
+      cart.forEach((itemInCart) => {
+        if (itemInCart.count >= itemInCart.stock) {
+          itemInCart.count = itemInCart.stock;
+        }
+      });
+    } else {
+      totalProduct = totalProduct + count;
     }
     return totalProduct;
   }
 
-  function getTotalPrice(){
+  function getTotalPrice() {
     let total = 0;
-    cart.map((product)=>{
-      total = total + (getTotalSingleProduct(product.count, product.stock) * product.price)
+    cart.map((product) => {
+      total =
+        total +
+        getTotalSingleProduct(product.count, product.stock) * product.price;
       return total;
-    })
+    });
     return total;
+  }
+
+  function clearCart() {
+    setCart([]);
   }
 
   return (
     <>
-      <cartContext.Provider value={{ cart, addToCart, getTotalItemCount, removeItem , getTotalSingleProduct, getTotalPrice}}>
+      <cartContext.Provider
+        value={{
+          cart,
+          addToCart,
+          getTotalItemCount,
+          removeItem,
+          getTotalSingleProduct,
+          getTotalPrice,
+          clearCart,
+        }}
+      >
         {props.children}
       </cartContext.Provider>
     </>
