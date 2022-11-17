@@ -12,6 +12,22 @@ En este proyecto se utilizo boostrap para el navegador y se utilizo SweetAlert p
 ### `Demo del proyecto`
 Mediante este Link puedes acceder a una demo online del proyecto [https://lucasbarrios-animego.netlify.app/](https://lucasbarrios-animego.netlify.app/)
 #
+# Proyecto "ANIME-GO"
+## Proyecto creado con React como parte del curso de React de CoderHouse.
+
+El objetivo del curso era realizar una app Web que contenga la funcion de carrito de compra.
+
+Por la pagina podras navegar mediante los links a distintas secciones ,ya sea categorias o el carrito, y se podras agregar y guardar productos en el carrito de compras.
+
+El proyecto utiliza como base de datos [FireBase](https://firebase.google.com/) , donde se guardan los datos de los productos y los datos de las ordenes de compra.
+
+En este proyecto se utilizo boostrap para el navegador y se utilizo SweetAlert para las notificaciones.
+
+## Demo del proyecto
+Mediante este Link puedes acceder a una demo online del proyecto [https://lucasbarrios-animego.netlify.app/](https://lucasbarrios-animego.netlify.app/)
+#
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
