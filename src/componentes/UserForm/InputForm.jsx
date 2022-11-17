@@ -1,8 +1,8 @@
 import React from 'react'
-
+import "./UserForm.css"
 function InputForm(props) {
   return (
-    <div>
+    <div className='inputform-box'>
         <label >{props.title}</label>
         <input
         value={props.value}

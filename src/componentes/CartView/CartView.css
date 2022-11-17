@@ -1,0 +1,38 @@
+.CartView-Box{
+    background-color: rgb(223, 146, 4);
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    border-radius: 2%;
+    border-style:solid;
+}
+
+.CartView-Box h2{
+    text-decoration:underline;
+    padding: 1%;
+}
+.CartView-Cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CartView-Img-Box{
+    width: 30%;
+}
+.CartView-Img{
+    width: 50%;
+    border-style: solid;
+    border-radius: 2%;
+}
+
+.CartView-Price-Box{
+    padding: 5%;
+}
+
+.CartView-Button{
+    width: 50%;
+    height: 50px;
+    font-size: 200%;
+}

@@ -4,6 +4,7 @@ import InputForm from "./InputForm";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { createBuyOrder } from "../../services/firebase";
+import "./UserForm.css"
 
 export default function UserForm({ cart, getTotalPrice, clearCart }) {
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ export default function UserForm({ cart, getTotalPrice, clearCart }) {
   return (
     <>
       <div>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} className="UserForm-Formulario">
           <InputForm
             value={userData.name}
             title="Nombre"
